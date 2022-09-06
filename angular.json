@@ -5,7 +5,9 @@
   "projects": {
     "veolia-angular": {
       "projectType": "application",
-      "schematics": {},
+      "schematics":
+      {
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,7 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
@@ -91,12 +93,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
         }
       }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
     }
   },
   "cli": {

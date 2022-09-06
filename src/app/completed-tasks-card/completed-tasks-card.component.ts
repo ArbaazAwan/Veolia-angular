@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-completed-tasks-card',
   templateUrl: './completed-tasks-card.component.html',
-  styleUrls: ['./completed-tasks-card.component.css']
+  styleUrls: ['./completed-tasks-card.component.scss']
 })
 export class CompletedTasksCardComponent implements OnInit {
 
