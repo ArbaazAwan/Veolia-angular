@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CompletedTasksCardComponent } from './completed-tasks-card.component';
+import { CompletedTasksCardComponent } from './completed-tasks-stats-card.component';
 
 describe('CompletedTasksCardComponent', () => {
   let component: CompletedTasksCardComponent;

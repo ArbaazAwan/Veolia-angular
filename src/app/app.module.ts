@@ -16,9 +16,9 @@ import { UsersUpdatesCardComponent } from './users-updates-card/users-updates-ca
 import { ClientsUpdatesCardComponent } from './clients-updates-card/clients-updates-card.component';
 import { NewClientsUpdatesCardComponent } from './new-clients-updates-card/new-clients-updates-card.component';
 import { SalesUpdatesCardComponent } from './sales-updates-card/sales-updates-card.component';
-import { WebsiteViewsCardComponent } from './website-views-card/website-views-card.component';
-import { DailySalesCardComponent } from './daily-sales-card/daily-sales-card.component';
-import { CompletedTasksCardComponent } from './completed-tasks-card/completed-tasks-card.component';
+import { WebViewsStatsCardComponent } from './web-views--stats-card/web-views-stats-card.component';
+import { SalesStatsCardComponent } from './sales-stats-card/sales-stats-card.component';
+import { CompletedTasksStatsCardComponent } from './completed-tasks-stats-card/completed-tasks-stats-card.component';
 
 @NgModule({
   declarations: [
@@ -36,9 +36,9 @@ import { CompletedTasksCardComponent } from './completed-tasks-card/completed-ta
     ClientsUpdatesCardComponent,
     NewClientsUpdatesCardComponent,
     SalesUpdatesCardComponent,
-    WebsiteViewsCardComponent,
-    DailySalesCardComponent,
-    CompletedTasksCardComponent
+    WebViewsStatsCardComponent,
+    SalesStatsCardComponent,
+    CompletedTasksStatsCardComponent
   ],
   imports: [
     BrowserModule,
