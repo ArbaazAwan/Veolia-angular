@@ -7,6 +7,7 @@ import { SidenavModule } from '../sidenav/sidenav.module';
 import { FooterModule } from '../footer/footer.module';
 import { ProjectTableModule } from '../projects-table-card/project-table.module';
 import { OrdersoverviewModule } from '../orders-overview-card/ordersoverview.module';
+import { NavbarModule } from '../navbar/navbar.module';
 
 
 
@@ -16,13 +17,14 @@ import { OrdersoverviewModule } from '../orders-overview-card/ordersoverview.mod
   ],
   imports: [
     CommonModule,
-    
+
+    NavbarModule,
     UpdatesModule,
     StatsModule,
     SidenavModule,
     FooterModule,
     ProjectTableModule,
-    OrdersoverviewModule,
+    OrdersoverviewModule
   ],
   exports:[DashboardComponent]
 })

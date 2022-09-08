@@ -18,12 +18,11 @@ import { DashboardModule } from './dashboard/dashboard.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
   ],
   imports: [
     AuthModule,
     DashboardModule,
-    
+
     BrowserModule,
     RouterModule.forRoot([
       { path: 'login', component:LoginComponent },
