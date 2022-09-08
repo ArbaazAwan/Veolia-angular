@@ -2,54 +2,41 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegistrationComponent } from './auth/registration/registration.component';
 import { RouterModule } from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
-import { SideNavbarComponent } from './side-navbar/side-navbar.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ProjectsTableCardComponent } from './projects-table-card/projects-table-card.component';
-import { OrdersOverviewCardComponent } from './orders-overview-card/orders-overview-card.component';
-import { MoneyUpdatesCardComponent } from './money-updates-card/money-updates-card.component';
-import { UsersUpdatesCardComponent } from './users-updates-card/users-updates-card.component';
-import { ClientsUpdatesCardComponent } from './clients-updates-card/clients-updates-card.component';
-import { NewClientsUpdatesCardComponent } from './new-clients-updates-card/new-clients-updates-card.component';
-import { SalesUpdatesCardComponent } from './sales-updates-card/sales-updates-card.component';
-import { WebViewsStatsCardComponent } from './web-views--stats-card/web-views-stats-card.component';
-import { SalesStatsCardComponent } from './sales-stats-card/sales-stats-card.component';
-import { CompletedTasksStatsCardComponent } from './completed-tasks-stats-card/completed-tasks-stats-card.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { FormsModule } from '@angular/forms';
+import { ModalFormComponent } from './modal-form/modal-form.component';
+
+import { AuthModule } from './auth/auth.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegistrationComponent,
-    DashboardComponent,
-    FooterComponent,
-    SideNavbarComponent,
     NavbarComponent,
-    ProjectsTableCardComponent,
-    OrdersOverviewCardComponent,
-    MoneyUpdatesCardComponent,
-    UsersUpdatesCardComponent,
-    ClientsUpdatesCardComponent,
-    NewClientsUpdatesCardComponent,
-    SalesUpdatesCardComponent,
-    WebViewsStatsCardComponent,
-    SalesStatsCardComponent,
-    CompletedTasksStatsCardComponent
   ],
   imports: [
+    AuthModule,
+    DashboardModule,
+    
     BrowserModule,
     RouterModule.forRoot([
       { path: 'login', component:LoginComponent },
       { path: 'registration', component:RegistrationComponent },
-      { path: 'dashboard',component:DashboardComponent },
+      { path: 'dashboard', component:DashboardComponent },
+      { path: 'modal', component:ModalFormComponent},
       { path: '', redirectTo:'login', pathMatch:'full' },
       { path: '**', redirectTo:'login', pathMatch: 'full' }
-    ])
+    ]),
+    NgbModule,
+    FormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  settingFlag:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  settingToggle(){
+    this.settingFlag = !this.settingFlag;
   }
 
 }
